@@ -59,11 +59,34 @@ void setup() {
   server.on("/turnalloff", turnOffAll);
   server.on("/1x1on", turn1by1on);
   server.on("/1x1off",turn1by1off);
+  server.on("/1on", turn1on);
+  server.on("/2on", turn2on);
+  server.on("/3on", turn3on);
+  server.on("/4on", turn4on);
+  server.on("/5on", turn5on);
+  server.on("/1off", turn1off);
+  server.on("/2off", turn2off);
+  server.on("/3off", turn3off);
+  server.on("/4off", turn4off);
+  server.on("/5off", turn5off);
+  server.on("/allon", turnOnAll);
+  server.on("/alloff", turnOffAll);
   
   
   server.begin();
   Serial.println(" Shining the LED to mark Warm up Complete "); 
+  pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
+  delay(500);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(500);
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(500);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(500);
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(500);
+  
   
 }
 
@@ -132,30 +155,7 @@ void turnOnAll()
 {
   delay(1);
   pinMode(D1,OUTPUT);
-  digitalWrite(D1, HIGH);
-
-  delay(1);
-  pinMode(D2,OUTPUT);
-  digitalWrite(D2, HIGH);
-
-  delay(1);
-  pinMode(D3,OUTPUT);
-  digitalWrite(D3, HIGH);
-
-  delay(1);
-  pinMode(D4,OUTPUT);
-  digitalWrite(D4,HIGH);
-  
-  delay(1);
-  pinMode(D8,OUTPUT);
-  digitalWrite(D8, HIGH);
-  server.send( 200, "text/html", responseHTML("Writing  : All pins put to High Success, you should see the relay On"));
-}
-void turnOffAll()
-{
-  delay(1);
-  pinMode(D1,OUTPUT);
-  digitalWrite(D1,LOW);
+  digitalWrite(D1, LOW);
 
   delay(1);
   pinMode(D2,OUTPUT);
@@ -167,7 +167,30 @@ void turnOffAll()
 
   delay(1);
   pinMode(D4,OUTPUT);
-  digitalWrite(D4, LOW);
+  digitalWrite(D4,LOW);
+  
+  delay(1);
+  pinMode(D8,OUTPUT);
+  digitalWrite(D8, HIGH);
+  server.send( 200, "text/html", responseHTML("Writing  : All pins put to High Success, you should see the relay On"));
+}
+void turnOffAll()
+{
+  delay(1);
+  pinMode(D1,OUTPUT);
+  digitalWrite(D1,HIGH);
+
+  delay(1);
+  pinMode(D2,OUTPUT);
+  digitalWrite(D2, HIGH);
+
+  delay(1);
+  pinMode(D3,OUTPUT);
+  digitalWrite(D3, HIGH);
+
+  delay(1);
+  pinMode(D4,OUTPUT);
+  digitalWrite(D4, HIGH);
   
   delay(1);
   pinMode(D8,OUTPUT);
@@ -234,6 +257,84 @@ void handleRoot(){
   server.send(200, "text/html", responseHTML("Hello from SRS - Single Relay Server"));
   
 }
+
+void turn1on()
+{
+  delay(1);
+  pinMode(D1,OUTPUT);
+  digitalWrite(D1, LOW);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 1 On"));
+}
+
+void turn2on()
+{
+  delay(1);
+  pinMode(D2,OUTPUT);
+  digitalWrite(D2, LOW);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 2 On"));
+}
+void turn3on()
+{
+  delay(1);
+  pinMode(D3,OUTPUT);
+  digitalWrite(D3, LOW);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 3 On"));
+}
+void turn4on()
+{
+  delay(1);
+  pinMode(D4,OUTPUT);
+  digitalWrite(D4, LOW);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 4 On"));
+}
+
+void turn5on()
+{
+  delay(1);
+  pinMode(D8,OUTPUT);
+  digitalWrite(D8, HIGH);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 5 On"));
+}
+
+void turn1off()
+{
+  delay(1);
+  pinMode(D1,OUTPUT);
+  digitalWrite(D1, HIGH);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 1 off"));
+}
+
+void turn2off()
+{
+  delay(1);
+  pinMode(D2,OUTPUT);
+  digitalWrite(D2, HIGH);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 2 off"));
+}
+void turn3off()
+{
+  delay(1);
+  pinMode(D3,OUTPUT);
+  digitalWrite(D3, HIGH);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 3 off"));
+}
+void turn4off()
+{
+  delay(1);
+  pinMode(D4,OUTPUT);
+  digitalWrite(D4, HIGH);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 4 off"));
+}
+
+void turn5off()
+{
+  delay(1);
+  pinMode(D8,OUTPUT);
+  digitalWrite(D8, LOW);
+  server.send( 200, "text/html", responseHTML("Writing  : you should see the relay 5 off"));
+}
+
+
 
 void loop() {
   // put your main code here, to run repeatedly:
