@@ -26,7 +26,7 @@ body{
     border:0px solid green;
     margin :.25em;
     background-color: #292929;
-    width: 7em;
+    width: 10em;
     padding:.5em;
     border-radius: .5em;
 }
@@ -47,11 +47,13 @@ body{
     padding: .25em;
 }
 .control-icon{
-    color:green;
-    background-color: grey;
+    
+    background-color: #666;
     border-radius: 50%;
     padding:.75em;
 }
+
+
 
 .control-state{
     border:0px solid red;
@@ -99,7 +101,7 @@ input:checked[type=checkbox]::before{
     left : 20%;
 }
 
-input:checked[type=checkbox] ~ .fa{ /* need alternate to work. its now not selecting the parent siblings*/
+input[type=checkbox]:checked ~ .control-switch {  /* need alternate to work. its now not selecting the parent siblings*/
     color : orange;
 }
 
