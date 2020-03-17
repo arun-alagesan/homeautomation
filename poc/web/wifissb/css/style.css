@@ -20,7 +20,7 @@ body{
     border:0px solid red;
     display: flex;
     flex-flow: row wrap;
-    justify-content: evenly-spaced;
+    justify-content:space-evenly;
 }
 .switch{
     border:0px solid green;
@@ -28,6 +28,7 @@ body{
     background-color: #292929;
     width: 7em;
     padding:.5em;
+    border-radius: .5em;
 }
 .control{
     border:0px solid blue;

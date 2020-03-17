@@ -7,8 +7,14 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against local file",
-            "file":"${workspaceFolder}/index.html"
+            "name": "Launch wifissb in  Chrome",
+            "file": "${workspaceFolder}/wifissb/index.html",
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch wifis in  Chrome",
+            "file": "${workspaceFolder}/wifis/index.html",
         }
     ]
 }
