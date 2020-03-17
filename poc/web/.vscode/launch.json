@@ -14,7 +14,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch wifis in  Chrome",
-            "file": "${workspaceFolder}/wifis/index.html",
+            "file": "${workspaceFolder}/wifis/index.html"
         }
     ]
 }
