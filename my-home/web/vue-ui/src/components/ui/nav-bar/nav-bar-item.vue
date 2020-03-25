@@ -1,6 +1,6 @@
 <template>
     <router-link  v-bind:to="item.url">
-    <div id='nav-bar-item' class="nav-bar-item" name="nav-bar-item" > {{item.name}} | </div>
+    <div id='nav-bar-item' class="nav-bar-item" name="nav-bar-item" > {{item.name}} </div>
     </router-link>
 </template>
 
@@ -10,19 +10,10 @@ import { Prop } from 'vue-property-decorator'
 export default {
 
    name : 'NavBarItem',
-
-   data () {
-       return{
-           
-       }
-   },
    
    props :{
-       displayName :String,
        item : Object
    }
-
-    
 }
 </script>
 <style lang="scss" >
