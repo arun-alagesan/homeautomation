@@ -1,7 +1,7 @@
 <template>
     <div id='nav-bar' class="nav-bar " >
-        <nav-bar-brand  :brandName="BrandName"/>
-        <nav-bar-item v-for="item in Items" :key="item.id"  :displayName="item.name" :item="item">  </nav-bar-item>
+        <nav-bar-brand  :brandName="this.$store.state.appTitle"/>
+        <nav-bar-item v-for="item in this.$store.state.navBarItems" :key="item.id"  :item="item">  </nav-bar-item>
     </div>
 </template>
 
@@ -12,20 +12,6 @@ import NavBarBrand from "@/components/ui/nav-bar/nav-bar-brand.vue"
 
 export default {
     name : "NavBarBrand",
-    data () {
-                return{
-                    Items : [
-                        {id :"1", name : "Item 1", iconname : "power" ,url: "/home"},
-                        {id :"2", name : "Item 2", iconname : "power" ,url: "/about"},
-                        {id :"3", name : "Item 3", iconname : "power" ,url: "/login"},
-                        {id :"4", name : "Item 4", iconname : "power" ,url: "#"},
-                        {id :"5", name : "Item 5", iconname : "power" ,url: "#"},
-                        {id :"6", name : "Item 6", iconname : "power" ,url: "#"},
-                    ],
-                    BrandName : "WiFi Home - Smart"
-                }
-            },
-
     components :{
        'nav-bar-item' : NavBarItem,
         'nav-bar-brand' : NavBarBrand
