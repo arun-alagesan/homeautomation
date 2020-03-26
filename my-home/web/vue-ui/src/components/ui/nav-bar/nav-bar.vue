@@ -1,53 +1,54 @@
 <template>
-    <nav  class="" v-bind:class="{active : show}"  >
+    <nav  class="" v-bind:class="{active : showMe.isActive }"   >
+        <!--
+        data value set to isActive from the event : {{isActive}} <br/>
+        data value set to show from the event : {{show}} <br/>
+        Property set by the parent component {{showMe}} <br/>
+        -->
         <ul>
             <nav-bar-item v-for="item in this.$store.state.navBarItems" :key="item.id"  :item="item" >  </nav-bar-item>
         </ul>            
     </nav>
 </template>
 
-<script lang="ts">
-    import NavBarItem from "@/components/ui/nav-bar/nav-bar-item.vue";
-    import NavBarBrand from "@/components/ui/nav-bar/nav-bar-brand.vue";
-    import {EventBus} from "../../../events/events";
-  
-    export default {
+<script>
 
-        name : "NavBar",
-        data() {
-                return {
-                show : false,
-                authenticated : false,
-                isActive : false
-                }
-            },
+import navBarItems from "@/components/ui/nav-bar/nav-bar-item.vue";
+import { EventBus } from "@/events/events";
 
-        components: {
-        'nav-bar-item' : NavBarItem
-        },
-        methods:{
-            showMenuPanel : function(data : boolean){
-             alert('hi' + data);
-             this.isActive = data;
-            }
-        },
-        mounted(){
+export default {
+    
+    name : 'NavBar',
+    props:[
+        'showMe' 
+    ],
 
-            this.authenticated = true;
-            console.log ('created', this);
-
-            /* EventBus.$on('showMenu', (datavalue) =>  {
-                console.log( "Event received : " + datavalue);
-                this.showNav = datavalue;
-                //showMenu('Arun');
-                }); */
-
-            //this.showMenu(true);
-                
-
+    data () {
+        return {
+            isActive : false,
+            show : false
         }
-
+    },
+    methods : {
+        showNavbarMenu : function (val){
+            this.isActive = val;
+            this.show = val;
+            console.log("ShowNavBarMenu : isActive = " + this.isActive );
+        }
+    },
+    created() {
+        EventBus.$on("showMenu" , function (state) {
+            console.log("event received - showMenu :" + state);
+            this.isActive = state;
+            this.show = state;
+        } );
+    },
+    components : {
+        'nav-bar-item' : navBarItems
     }
+
+}
+
 </script>
 <style lang="scss" scoped>
 
@@ -84,15 +85,4 @@
         }
     }
 
-
-    /* #nav-bar {
-        border : 1px solid red;
-        background-color : orange;
-        padding: 1em;
-        margin: 0;
-        text-align: left;
-        display: flex;
-        flex-flow: row wrap;
-    }
-    */
 </style>

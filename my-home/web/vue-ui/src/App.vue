@@ -3,7 +3,7 @@
     <header>
       <nav-bar-brand :brandName="this.$store.state.appTitle"/>
        <div ref="menuToggle" @click="showMenu" class="menu-toggle " v-bind:class="{active : isActive}"> <!--&#x2630; &#x2715;--> </div>  
-      <nav-bar  ></nav-bar>
+      <nav-bar  :showMe="{isActive}" ></nav-bar>
       <div class="clearfix"></div>
     </header>
     
@@ -111,8 +111,8 @@ export default {
       this.authenticated = false;
     },
     showMenu(){
-      this.isActive = !this.isActive
-      console.log ("Emeting event : " + this.isActive )
+      this.isActive = !this.isActive;
+      console.log ("Emeting event : " + this.isActive );
       EventBus.$emit('showMenu', this.isActive);
     }
   },
