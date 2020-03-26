@@ -59,6 +59,7 @@ export default {
             margin:0;
             padding: 0;
             display: flex;
+            z-index: 999;
         }
 
         @media (max-width: 768px){
