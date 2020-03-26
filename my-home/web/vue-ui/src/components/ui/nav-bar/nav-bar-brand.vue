@@ -30,6 +30,14 @@ export default {
    text-decoration: none;
    font-weight: 700;
    
+   @media (max-width: 768px ) {
+
+      font-size: 26px;
+      height : 40px;
+      line-height: 40px;
+      padding: 10px;
+      
+   }
 }
 
 </style>

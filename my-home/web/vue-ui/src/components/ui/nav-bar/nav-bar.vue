@@ -61,19 +61,18 @@ export default {
             display: flex;
         }
 
-
         @media (max-width: 768px){
 
             width: 100%;
-            text-align: center;
+            
 
             ul {
                 
                 display: none;
-                position: relative;
+                position: absolute;
+                background-color:  rgb(17, 17,17);;
                 width: 100%;
-
-                
+                margin: 0;
             }
 
             &.active{

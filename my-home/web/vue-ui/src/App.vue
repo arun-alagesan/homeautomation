@@ -7,13 +7,24 @@
       <div class="clearfix"></div>
     </header>
     
-    
-    <router-view v-on:setAuthenticated = "setAuthenticated" />
+    <div class="content">
+      <router-view  />
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.content{
+  padding: 10px;
+  margin : 10px;
+  border : 1px solid green;
+  
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -21,8 +32,8 @@
   margin:0 auto;
   padding: 0;
   max-width: 1200px;
+  height: 100vh;
   background-color : rgb(17, 17,17);
-  
   color : rgb(241, 163,73)
 }
 
@@ -45,18 +56,20 @@ header{
   }
 
   @media (max-width: 768px) {
+    margin : 0;
 
     .menu-toggle{
         display:block;
-          width: 40px;
-          height: 40px;
-          margin: 10px;
-          float: right;
-          cursor: pointer;
-          font-size: 36px;
-          font-weight: 700;
-          color:rgb(241, 163,73);
-          text-align : center;
+        font-size: 26px;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        float: right;
+        cursor: pointer;
+        font-weight: 700;
+        color:rgb(241, 163,73);
+        text-align : center;
 
           
     }
