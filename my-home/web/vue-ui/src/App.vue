@@ -19,12 +19,7 @@ body{
   padding: 0;
   height: 100%;
 }
-.content{
-  padding: 10px;
-  margin : 10px;
-  border : 1px solid green;
-  
-}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -36,6 +31,7 @@ body{
   background-color : rgb(17, 17,17);
   color : rgb(241, 163,73)
 }
+
 
 header{
   position: relative;
@@ -94,7 +90,10 @@ header{
   clear: both;
 }
 
-
+.content{
+  padding: 10px 10px auto;
+  margin : 10px 10px auto;
+}
 </style>
 <script>
 import NavBar from "@/components/ui/nav-bar/nav-bar.vue"
