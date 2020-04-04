@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <switch-panel > SwitchPanel </switch-panel>
+    <switch-panel></switch-panel>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import SwitchPanel from "@/components/ui/switch/switch-panel.vue";
 export default {
   name: "Home",
   components: {
-    'switch-panel' : SwitchPanel
+    "switch-panel": SwitchPanel
   }
 };
 </script>
