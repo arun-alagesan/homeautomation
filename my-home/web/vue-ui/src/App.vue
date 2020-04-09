@@ -117,7 +117,6 @@ export default {
   methods: {
     setAuthenticated : function (status){
       this.authenticated = status;
-      console.log ("setAuthenticated : " + status);
     },
     logout(){
       this.authenticated = false;
