@@ -14,6 +14,11 @@
 </template>
 
 <style lang="scss">
+html{
+  margin-bottom: 1em;
+  background-color: rgb(17, 17,17);
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -24,10 +29,10 @@ body{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin:0 auto;
+  margin:2px auto;
   padding: 0;
   max-width: 1200px;
-  height: 100vh;
+  height:100%;
   background-color : rgb(17, 17,17);
   color : rgb(241, 163,73)
 }
@@ -129,10 +134,12 @@ export default {
   },
 
   mounted () {
-    // if(!this.authenticated)
-    // {
-    //   this.$router.replace({name : 'Login'});
-    // }
+
+    /* if(!this.authenticated)
+    {
+      this.$router.replace({name : 'Login'});
+    } */
+
   }
 
 }
