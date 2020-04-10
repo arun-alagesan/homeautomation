@@ -39,8 +39,8 @@ jobs:
     - name: git init dist folder
       run: |
             git init
-            git config user.name = ${{ secrets.CI_USER }}
-            git config user.email = ${{ secrets.CI_EMAIL }}
+            git config --local user.name = ${{ secrets.CI_USER }}
+            git config --local user.email = ${{ secrets.CI_EMAIL }}
 
       working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
 
