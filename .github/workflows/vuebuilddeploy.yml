@@ -53,7 +53,7 @@ jobs:
       working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
 
     - name: git push dist folder
-      run: git push -f https://${{secrets.CI_ACCESS_TOKEN}}@github.com/my-home-vue-ui.git master:gh-pages
+      run: git push -f https://${{secrets.CI_ACCESS_TOKEN}}@github.com/arun-alagesan/my-home-vue-ui.git master:gh-pages
       working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
 
   
