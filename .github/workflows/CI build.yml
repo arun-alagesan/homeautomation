@@ -26,6 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: run npm ci
       run: pwd
+      working-directory: ${{ github.workspace }}
   
     - name: run npm build
       run: ls -l # npm run build --if-present
