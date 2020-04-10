@@ -129,10 +129,10 @@ export default {
   },
 
   mounted () {
-    if(!this.authenticated)
-    {
-      this.$router.replace({name : 'Login'});
-    }
+    // if(!this.authenticated)
+    // {
+    //   this.$router.replace({name : 'Login'});
+    // }
   }
 
 }
