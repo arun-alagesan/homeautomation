@@ -122,7 +122,6 @@ export default {
   methods: {
     setAuthenticated : function (status){
       this.authenticated = status;
-      console.log ("setAuthenticated : " + status);
     },
     logout(){
       this.authenticated = false;
@@ -135,10 +134,12 @@ export default {
   },
 
   mounted () {
+
     /* if(!this.authenticated)
     {
       this.$router.replace({name : 'Login'});
     } */
+
   }
 
 }

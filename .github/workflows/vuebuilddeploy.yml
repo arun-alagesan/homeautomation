@@ -1,0 +1,62 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: vue-ui Dev builds Deploy
+
+on:
+  push:
+    branches: [dev]
+
+jobs:
+  build-and-deploy:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: run npm ci
+      run: npm ci
+      working-directory: ${{ github.workspace }}/my-home/web/vue-ui
+  
+    - name: run npm build
+      run: npm run build --if-present
+      working-directory: ${{ github.workspace }}/my-home/web/vue-ui
+
+    - name: test dist folder
+      run: |
+            pwd
+            ls -l
+      working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
+
+    - name: git init dist folder
+      run: |
+            git init
+            git config --local user.name  ${{ secrets.CI_USER }}
+            git config --local user.email  ${{ secrets.CI_EMAIL }}
+
+      working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
+
+    - name: git add dist folder
+      run: git add -A
+      working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
+
+    - name: git commit dist folder
+      run: git commit -m "deploy"
+      working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
+
+    - name: git push dist folder
+      run: git push -f https://${{secrets.CI_ACCESS_TOKEN}}@github.com/arun-alagesan/my-home-vue-ui.git master:gh-pages
+      working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
+
+  
+
+      env:
+        CI: true
