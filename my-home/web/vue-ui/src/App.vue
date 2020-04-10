@@ -135,10 +135,10 @@ export default {
 
   mounted () {
 
-    /* if(!this.authenticated)
+    if(!this.authenticated)
     {
       this.$router.replace({name : 'Login'});
-    } */
+    }
 
   }
 
