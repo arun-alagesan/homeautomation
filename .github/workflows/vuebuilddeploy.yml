@@ -44,6 +44,10 @@ jobs:
       run: git add -A
       working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
 
+    - name: git commit dist folder
+      run: git commit -m "deploy"
+      working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
+
     - name: git push dist folder
       run: git push -f https://github.com/arun-alagesan/my-home-vue-ui.git master:gh-pages
       working-directory: ${{ github.workspace }}/my-home/web/vue-ui/dist
