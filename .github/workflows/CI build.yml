@@ -29,7 +29,7 @@ jobs:
       run: pwd
     - name: run npm build
       working-directory: /my-home/web/vue-ui
-      run: # npm run build --if-present
+      run: ls -a # npm run build --if-present
 
       env:
         CI: true
