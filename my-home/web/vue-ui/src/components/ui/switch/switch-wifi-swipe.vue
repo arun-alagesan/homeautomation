@@ -30,7 +30,7 @@ export default {
         }
     },
     created() {
-        console.log("Swipe Switch created for :" + this.name);
+        console.log("Swipe Switch created for :" + this.name + " state - " + this.checked);
     },
 }
 </script>
