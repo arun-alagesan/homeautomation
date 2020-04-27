@@ -5,10 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    appTitle : "My Smart Home",
+    appTitle : `My Smart Home`,
     appLogoUri : "",
     appLogoBase64 : "",
     authenticated : false,
+    verison: process.env.VUE_APP_VERSION,
     navBarItems : [
         {id :"1", name : "Home", iconname : "power" ,url: "/home"},
         {id :"2", name : "Services", iconname : "power" ,url: "#"},
