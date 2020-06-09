@@ -47,7 +47,7 @@ Poor me I looked around to find no one around to see my prototype success.
 
 I put accross all my thought of connecting the dots of the Idea
 
-![System Design](https://drive.google.com/file/d/1Dw6C7Zxv3qIXORc-HyVYznBz7PiZIT4Z/view?usp=sharing)
+![System Design](https://raw.githubusercontent.com/arun-alagesan/homeautomation/master/docs/resources/Sytem%20Design.png)
 
 
 
