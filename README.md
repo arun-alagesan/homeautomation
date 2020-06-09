@@ -31,7 +31,7 @@ I looked for a water level monitors that can alert on near filling up situation 
 
 On thinking very deep on this a spark hit me
 
->**"_You are genius , you write advance programs on computer and a gadget freak, have all means of connected devices in most advance platform, build application your whole life time for work, What have to done for you.. ? Why not write your own program and command you computer to work for you. You call yourself a Software architect, solving most complex business problems with computer programs.. Whats stopping you to solve you own problem_"**
+>**"_You are genius, you write advance programs on computer and a gadget freak, have all means of connected devices in most advance platform, build application your whole life time for work, What have to done for you? Why not write your own program and command your computer to work for you. You call yourself a Software architect, solving most complex business problems with computer programs.. Whats stopping you to solve your own problem_"**
 
 I needed a device runnning on low energy to constantly measure the water level in the tank and trigger a notification.
 Then I searched the internet seeking a similar soul who have had the same problem and how the soul dealt the problem.
