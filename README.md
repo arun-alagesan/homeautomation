@@ -1,4 +1,27 @@
 # homeautomation
+
+## Dev branch
+![vue-ui CI builds](https://github.com/arun-alagesan/homeautomation/workflows/CI%20builds/badge.svg?branch=dev&event=push)
+
+![vue-ui Dev builds Deploy](https://github.com/arun-alagesan/homeautomation/workflows/vue-ui%20Dev%20builds%20Deploy/badge.svg?branch=dev&event=push)
+
+Demo for vue-ui for the #my-home# project
+https://arun-alagesan.github.io/my-home-vue-ui
+
+
+####Developement process :
+
+>1. Always checkout a new branch from dev for any improvement or feature work and avoid direct commits to dev as much as possible
+>
+>2. Create a Pull request to dev branch from the feature branch
+>
+>3. CI build will kick in and wait for it to complete. Fix any error or build failure 
+>
+>4. Review and merge the pull request
+>
+>5. CD job will kick in to build the push the dist folder to demo repo /my-home-vue-ui
+
+
 ## Motivation 
 I am living in a 2 story house with a over head tank on top of the second storey. During summner the ground water goes below 60 ft and the water delivery is reduces. It usually take around 20 to 30 minutes to fill up the tank. In contrast during the winter or rainy days the water tank fills up quickly in less than 10 or 8 minutes.   
 
@@ -25,4 +48,10 @@ Poor me I looked around to find no one around to see my prototype success.
 I put accross all my thought of connecting the dots of the Idea
 
 ![System Design](https://drive.google.com/file/d/1Dw6C7Zxv3qIXORc-HyVYznBz7PiZIT4Z/view?usp=sharing)
+
+
+
+
+  
+  
 
