@@ -24,5 +24,5 @@ Poor me I looked around to find no one around to see my prototype success.
 
 I put accross all my thought of connecting the dots of the Idea
 
-![System Design](https://app.diagrams.net/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Sytem%20Design.svg#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1x2bxz9yrhpwtB5dfUIWOCRybwfptlsOw%26export%3Ddownload)
+![System Design](https://drive.google.com/file/d/1x2bxz9yrhpwtB5dfUIWOCRybwfptlsOw/view?usp=sharing)
 
