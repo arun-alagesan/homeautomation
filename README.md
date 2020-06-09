@@ -24,5 +24,5 @@ Poor me I looked around to find no one around to see my prototype success.
 
 I put accross all my thought of connecting the dots of the Idea
 
-![System Design](https://drive.google.com/file/d/1x2bxz9yrhpwtB5dfUIWOCRybwfptlsOw/view?usp=sharing)
+![System Design](https://drive.google.com/file/d/1Dw6C7Zxv3qIXORc-HyVYznBz7PiZIT4Z/view?usp=sharing)
 
